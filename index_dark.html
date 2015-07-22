@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="IBM Power UX">
+
+    <title>IBM Power Systems Dashboard</title>
+
+    <!-- Bootstrap core and other CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="css/dash.css" rel="stylesheet">
+    <link href="css/card.css" rel="stylesheet">
+    <link href="css/buttons.css" rel="stylesheet">
+    <link href="css/tabs.css" rel="stylesheet">
+    <link href="css/panel.css" rel="stylesheet">
+    <link href="css/charts.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elemdnts and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- google material design icons -->
+    <link href="fonts/material-icons/material-design-iconic-font.min.css" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" href="/favicon.ico">
+  </head>
+
+  <body>
+    <!-- Dash Navbar Top
+    Navbar can be visible dnl-visible, or Hidden dnl-hidden -->
+    <nav class="navbar navbar-static-top dash-navbar-top dnl-visible">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#dnt-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="fa fa-ellipsis-v"></span>
+          </button>
+          <button class="dnl-btn-toggle">
+            <span class="fa fa-bars"></span>
+          </button>
+          <a class="navbar-brand" href="#">IBM <span>Power HA</span></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="dnt-collapse">
+          <!-- This dropdown is for avatar -->
+          <ul class="nav navbar-nav navbar-right navbar-avatar">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="http://placehold.it/50x50" class="dnt-avatar" alt="IBM Power"></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Link 1 <span>Right</span></a></li>
+                <li><a href="#">Link 2</a></li>
+                <li class="active"><a href="#">Active link</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-right dnt-navbar-form" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn"><span class="fa fa-search"></span></button>
+          </form>
+          <!-- This dropdown is for normal links -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">Button</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="fa fa-angle-down"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Link 1 <span>LOL</span></a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav> <!-- /.navbar -->
+
+    <!-- Dash Navbar Left
+    Available versions: dnl-visible, dnl-hidden -->
+    <div class="dash-navbar-left dnl-visible">
+      <p class="dnl-nav-title">Home</p>
+      <ul class="dnl-nav">
+        <li>
+          <a class="collapsed" data-toggle="collapse" href="#collapseStatistics" aria-expanded="false" aria-controls="collapseStatistics">
+            <span class="glyphicon glyphicon-stats dnl-link-icon"></span>
+            <span class="dnl-link-text">Statistics</span>
+            <span class="fa fa-angle-up dnl-btn-sub-collapse"></span>
+          </a>
+          <!-- Dropdown level one -->
+          <ul class="dnl-sub-one collapse" id="collapseStatistics">
+            <li>
+              <a href="#">
+                <span class="fa fa-clock-o dnl-link-icon"></span>
+                <span class="dnl-link-text">Daily</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa fa-history dnl-link-icon"></span>
+                <span class="dnl-link-text">Annual</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <span class="glyphicon glyphicon-folder-open dnl-link-icon"></span>
+            <span class="dnl-link-text">Pages</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="glyphicon glyphicon-comment dnl-link-icon"></span>
+            <span class="dnl-link-text">Comments</span>
+            <span class="badge">4</span>
+          </a>
+        </li>
+        <li>
+          <a class="collapsed" data-toggle="collapse" href="#collapseLevelOne" aria-expanded="false" aria-controls="collapseLevelOne">
+            <span class="fa fa-sort-amount-desc dnl-link-icon"></span>
+            <span class="dnl-link-text">Dropdown level 1</span>
+            <span class="fa fa-angle-up dnl-btn-sub-collapse"></span>
+          </a>
+          <!-- Dropdown level one -->
+          <ul class="dnl-sub-one collapse" id="collapseLevelOne">
+            <li>
+              <a href="#">
+                <span class="fa fa-slack dnl-link-icon"></span>
+                <span class="dnl-link-text">Level 1</span>
+              </a>
+            </li>
+            <li>
+              <a class="collapsed" data-toggle="collapse" href="#collapseLevelTwo" aria-expanded="false" aria-controls="collapseLevelTwo">
+                <span class="fa fa-level-down dnl-link-icon"></span>
+                <span class="dnl-link-text">Dropdown level 2</span>
+                <span class="fa fa-angle-up dnl-btn-sub-collapse"></span>
+              </a>
+              <!-- Dropdown level two -->
+              <ul class="dnl-sub-two collapse" id="collapseLevelTwo">
+                <li>
+                  <a href="#">
+                    <span class="fa fa-wifi dnl-link-icon"></span>
+                    <span class="dnl-link-text">Level 2</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="fa fa-wifi dnl-link-icon"></span>
+                    <span class="dnl-link-text">Level 2</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <span class="fa fa-wifi dnl-link-icon"></span>
+                    <span class="dnl-link-text">Level 2</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa fa-slack dnl-link-icon"></span>
+                <span class="dnl-link-text">Level 1</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p class="dnl-nav-title">Filter</p>
+      <ul class="dnl-nav">
+        <li>
+          <a href="#">
+            <span class="fa fa-image dnl-link-icon"></span>
+            <span class="dnl-link-text">Image</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="fa fa-video-camera dnl-link-icon"></span>
+            <span class="dnl-link-text">Video</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="glyphicon glyphicon-folder-open dnl-link-icon"></span>
+            <span class="dnl-link-text">Audio</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <span class="fa fa-file-text dnl-link-icon"></span>
+            <span class="dnl-link-text">File</span>
+            <span class="badge">4</span>
+          </a>
+        </li>
+        <li class="active">
+          <a href="#">
+            <span class="fa fa-link dnl-link-icon"></span>
+            <span class="dnl-link-text">Active link</span>
+          </a>
+        </li>
+      </ul>
+      <p class="dnl-nav-title">Category</p>
+      <ul class="dnl-nav">
+        <li>
+          <a class="collapsed" data-toggle="collapse" href="#collapseCategoryAll" aria-expanded="false" aria-controls="collapseCategoryAll">
+            <span class="glyphicon glyphicon-tags dnl-link-icon"></span>
+            <span class="dnl-link-text">All</span>
+            <span class="fa fa-angle-up dnl-btn-sub-collapse"></span>
+          </a>
+          <!-- Dropdown level one -->
+          <ul class="dnl-sub-one collapse" id="collapseCategoryAll">
+            <li>
+              <a href="#">
+                <span class="fa fa-dot-circle-o dnl-link-icon"></span>
+                <span class="dnl-link-text">UI</span>
+                <span class="badge">4</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa fa-dot-circle-o dnl-link-icon"></span>
+                <span class="dnl-link-text">Design</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa fa-dot-circle-o dnl-link-icon"></span>
+                <span class="dnl-link-text">App</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="fa fa-dot-circle-o dnl-link-icon"></span>
+                <span class="dnl-link-text">Homepage</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#">
+            <span class="fa fa-dot-circle-o dnl-link-icon"></span>
+            <span class="dnl-link-text">Popular</span>
+          </a>
+        </li>
+      </ul>
+    </div> <!-- /.dash-navbar-left -->
+
+    <!-- Enter your page content below here
+    Available navbar effects: dnl-push, dnl-overlay
+    Available navbar versions: dnl-visible, dnl-hidden -->
+    <div class="content-wrap dnl-visible" data-effect="dnl-push">
+      <div class="container-fluid">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h2>Text</h2>
+              <small>Brief description of the content of this card</small>
+            </div>
+            <div class="card-body card-padding">
+              <p class="lead">Lead text <em>visible</em>. There is a key difference between these versions.</p>
+              <h1>H1EADING TEXT</h1>
+              <h2>H2EADING TEXT</h2>
+              <h3>H3EADING TEXT</h3>
+              <h4>H4EADING TEXT</h4>
+              <h5>H5EADING TEXT</h5>
+              <p>Quisque nec turpis at urna dictum luctus. Suspendisse convallis dignissim eros at volutpat. In egestas mattis dui. Aliquam mattis dictum aliquet. Nulla sapien mauris, eleifend et sem ac, commodo dapibus odio. Vivamus pretium nec odio cursus elementum. Suspendisse molestie ullamcorper ornare.</p>
+              <button type="button" class="btn btn-primary btn-dark">Button</button>
+              <button type="button" class="btn btn-primary btn-light">Button</button>
+            </div> <!-- end card body-->
+          </div><!--End card -->
+        </div><!-- end col -->
+
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h2>Empty Card</h2>
+              <small></small>
+            </div>
+            <div class="card-body card-padding">
+            </div> <!-- end card body-->
+          </div><!--End card -->
+        </div><!-- end col -->
+
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h2>Buttons/Icon Buttons</h2>
+              <small></small>
+            </div>
+            <div class="card-body card-padding">
+              <div class="btn-demo">
+                <button class="btn btn-default">Default</button>
+                <button class="btn btn-info">Info</button>
+                <button class="btn btn-primary">Primary</button>
+                <button class="btn btn-success">Success</button>
+                <button class="btn btn-warning">Warning</button>
+                <button class="btn btn-danger">Danger</button>
+
+                <br/>
+                <br/>
+
+                <button class="btn btn-default"><i class="md md-home"></i> Home</button>
+                <button class="btn btn-default"><i class="md md-search"></i> Search</button>
+                <button class="btn btn-default"><i class="md md-more-vert"></i> More</button>
+                <button class="btn btn-default"><i class="md md-arrow-forward"></i> Forward</button>
+                <button class="btn btn-default"><i class="md md-arrow-back"></i> Back</button>
+                <button class="btn btn-default"><i class="md md-sync"></i> Sync</button>
+                <button class="btn btn-default"><i class="md md-check"></i> Check</button>
+                <button class="btn btn-default"><i class="md md-close"></i> Check</button>
+                <button class="btn btn-default"><i class="md md-menu"></i> Menu</button>
+                <button class="btn btn-default"><i class="md md-apps"></i> Apps</button>
+                <button class="btn btn-default"><i class="md md-done-all"></i> Done</button>
+                <button class="btn btn-default"><i class="md md-trending-up"></i> Up</button>
+                <button class="btn btn-default"><i class="md md-get-app"></i> Get</button>
+                <button class="btn btn-default"><i class="md md-call"></i> Call</button>
+
+                <br/>
+                <br/>
+                <button class="btn btn-primary btn-lg">Large</button>
+                <button class="btn btn-primary">Default</button>
+                <button class="btn btn-primary btn-sm">Small</button>
+                <button class="btn btn-primary btn-xs">Extra Small</button>
+
+                <br/>
+                <br/>
+
+
+                <button class="btn btn-default btn-icon"><i class="md md-home"></i></button>
+                <button class="btn btn-default btn-icon"><i class="md md-search"></i></button>
+                <button class="btn btn-default btn-icon"><i class="md md-more-vert"></i></button>
+                <button class="btn btn-default btn-icon"><i class="md md-arrow-forward"></i></button>
+                <button class="btn btn-default btn-icon"><i class="md md-arrow-back"></i></button>
+                <button class="btn btn-default btn-icon"><i class="md md-sync"></i></button>
+                <button class="btn btn-default btn-icon"><i class="md md-check"></i></button>
+                <button class="btn btn-default btn-icon"><i class="md md-close"></i></button>
+                <button class="btn btn-default btn-icon"><i class="md md-menu"></i></button>
+                <button class="btn btn-default btn-icon"><i class="md md-apps"></i></button>
+                <button class="btn btn-default btn-icon"><i class="md md-done-all"></i></button>
+                <button class="btn btn-default btn-icon"><i class="md md-trending-up"></i></button>
+                <button class="btn btn-default btn-icon"><i class="md md-get-app"></i></button>
+                <button class="btn btn-default btn-icon"><i class="md md-call"></i></button>
+
+                <br/>
+                <br/>
+
+                <button class="btn btn-primary btn-icon"><i class="md md-home"></i></button>
+                <button class="btn btn-info btn-icon"><i class="md md-search"></i></button>
+                <button class="btn btn-success btn-icon"><i class="md md-more-vert"></i></button>
+                <button class="btn btn-warning btn-icon"><i class="md md-arrow-forward"></i></button>
+                <button class="btn btn-danger btn-icon"><i class="md md-arrow-back"></i></button>
+                <button class="btn bgm-teal btn-icon"><i class="md md-sync"></i></button>
+                <button class="btn bgm-orange btn-icon"><i class="md md-check"></i></button>
+                <button class="btn bgm-cyan btn-icon"><i class="md md-close"></i></button>
+                <button class="btn bgm-lightgreen btn-icon"><i class="md md-menu"></i></button>
+                <button class="btn bgm-lime btn-icon"><i class="md md-apps"></i></button>
+                <button class="btn bgm-amber btn-icon"><i class="md md-done-all"></i></button>
+                <button class="btn bgm-gray btn-icon"><i class="md md-trending-up"></i></button>
+                <button class="btn bgm-lightblue btn-icon"><i class="md md-get-app"></i></button>
+                <button class="btn bgm-deeporange btn-icon"><i class="md md-call"></i></button>
+            </div>
+            </div> <!-- end card body-->
+          </div><!--End card -->
+        </div><!-- end col -->
+
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+                <h2>Tabs <small>Simple tabs made with love.</small></h2>
+            </div>
+
+            <div class="card-body card-padding">
+                <div role="tabpanel">
+                  <!-- Can make nav ajust right by adding tab-nav-right -->
+                    <ul class="tab-nav" role="tablist">
+                        <li class="active"><a href="#one" aria-controls="one" role="tab" data-toggle="tab">One</a></li>
+                        <li><a href="#two" aria-controls="two" role="tab" data-toggle="tab">Two</a></li>
+                        <li><a href="#three" aria-controls="three" role="tab" data-toggle="tab">Three</a></li>
+                        <li><a href="#four" aria-controls="four" role="tab" data-toggle="tab">Four</a></li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="one">
+                            <p>Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nulla sit amet est. Praesent ac massa at ligula laoreet iaculis.
+        Vivamus aliquet elit ac nisl. Nulla porta dolor. Cras dapibus. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.</p>
+                            <p>In hac habitasse platea dictumst. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos hymenaeos. Nam eget dui. In ac felis quis tortor malesuada pretium. Phasellus consectetuer vestibulum elit.
+        Duis lobortis massa imperdiet quam. Pellentesque commodo eros a enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Phasellus a est. Pellentesque commodo eros a enim.
+        Cras ultricies mi eu turpis hendrerit fringilla. Donec mollis hendrerit risus. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Praesent egestas neque eu enim. In hac habitasse platea dictumst.</p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="two">
+                            <p>Morbi mattis ullamcorper velit. Etiam rhoncus. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Cras id dui. Curabitur turpis.
+        Etiam ut purus mattis mauris sodales aliquam. Aenean viverra rhoncus pede. Nulla sit amet est. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Praesent ac sem eget est egestas volutpat.
+        Cras varius. Morbi mollis tellus ac sapien. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Fusce vel dui.</p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="three">
+                            <p>Etiam rhoncus. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Cras id dui. Curabitur turpis.
+        Etiam ut purus mattis mauris sodales aliquam. Aenean viverra rhoncus pede. Nulla sit amet est. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Praesent ac sem eget est egestas volutpat.
+        Cras varius. Morbi mollis tellus ac sapien. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Fusce vel dui.Morbi mattis ullamcorper velit. Etiam rhoncus. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Cras id dui. Curabitur turpis.
+        Etiam ut purus mattis mauris sodales aliquam. Aenean viverra rhoncus pede. Nulla sit amet est. Donec mi odio, faucibus at, scelerisque quis, convallis in, nisi. Praesent ac sem eget est egestas volutpat.
+        Cras varius. Morbi mollis tellus ac sapien. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nam ipsum risus, rutrum vitae, vestibulum eu, molestie vel, lacus. Fusce vel dui.</p>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="four">
+                            <p>Praesent turpis. Phasellus magna. Fusce vulputate eleifend sapien. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Donec elit libero, sodales nec, volutpat a, suscipit non, turpis.</p>
+                        </div>
+                    </div> <!-- end tab content -->
+                </div> <!-- end tab panel -->
+              </div> <!-- end card body -->
+          </div> <!-- end card -->
+        </div> <!-- /col -->
+
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-header">
+              <h2>Accordian</h2>
+              <small>Expand and collapseable menus</small>
+            </div>
+            <div class="card-body card-padding">
+              <div class="panel-group" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-collapse">
+                    <div class="panel-heading" role="tab" id="headingOne">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Collapsible Group Item #1
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="collapse in" role="tabpanel" aria-labelledby="headingOne">
+                        <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-collapse">
+                    <div class="panel-heading" role="tab" id="headingTwo">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Collapsible Group Item #2
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+                        <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-collapse">
+                    <div class="panel-heading" role="tab" id="headingThree">
+                        <h4 class="panel-title">
+                            <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                Collapsible Group Item #3
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+                        <div class="panel-body">
+                            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                        </div>
+                    </div>
+                </div>
+              </div>
+            </div> <!-- end card body-->
+          </div><!--End card -->
+        </div> <!-- end column -->
+
+
+
+      </div><!-- End container fluid -->
+    </div> <!-- /.content-wrap -->
+
+    <!-- Le javaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/dash.js"></script>
+
+
+    <!--CHarts using flot chart-->
+    <script src="third_party/flot/jquery.flot.min.js"></script>
+    <script src="third_party/flot/jquery.flot.resize.min.js"></script>
+    <script src="third_party/flot/jquery.flot.orderBar.js"></script>
+    <script src="third_party/flot/jquery.flot.pie.min.js"></script>
+    <script src="third_party/flot/jquery.flot.tooltip.js"></script>
+    <script src="third_party/flot/plugins/curvedLines.js"></script>
+
+    <!-- Charts - Please read the read-me.txt inside the js folder-->
+    <script src="js/flot-charts/curved-line-chart.js"></script>
+    <script src="js/flot-charts/line-chart.js"></script>
+    <script src="js/flot-charts/bar-chart.js"></script>
+    <script src="js/flot-charts/dynamic-chart.js"></script>
+    <script src="js/flot-charts/pie-chart.js"></script>
+
+  </body>
+</html>
